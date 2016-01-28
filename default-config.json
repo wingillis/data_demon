@@ -1,13 +1,13 @@
 {
+  "is_backup": true,
   "interval": {
     "second": "*",
     "day": "*",
-    "year": "*",
     "minute": "*/1",
     "month": "*",
+    "year": "*",
     "hour": "*"
   },
-  "is_backup": true,
+  "output": false,
   "backup_location": "/Users/wgillis/experiments"
-
 }

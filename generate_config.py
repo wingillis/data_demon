@@ -16,6 +16,7 @@ def main():
     }
     params['is_backup'] = True
     params['output'] = False
+    params['type'] = 'python'
     params['script'] = 'jobs/' + savefile + '.py'
 
     if not savefile:

@@ -1,0 +1,17 @@
+{
+  "is_backup": true,
+  "interval": {
+    "second": "*",
+    "day": "*",
+    "minute": "*",
+    "month": "*",
+    "year": "*",
+    "hour": "22"
+  },
+  "output": false,
+  "type": "python",
+  "script": "jobs/sample_job.py",
+  "watch": [
+    "/Users/wgillis/Desktop/test"
+  ]
+}
