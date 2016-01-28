@@ -3,15 +3,19 @@ import time
 import imp
 import sys
 from glob import glob
+import os
 from os.path import basename, splitext, abspath
 from os.path import join
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.executors.pool import ThreadPoolExecutor
 from apscheduler.schedulers.background import BackgroundScheduler, BlockingScheduler
-# from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
+
+# DECISION: no module loading, but instead having
+# a config file for every script run
 
 
 def main():
+    os.chdir(os.path.dirname(abspath(__file__)))
     job_id = dict()
     # sys.path.append(abspath('jobs'))
     print(abspath('jobs'))
