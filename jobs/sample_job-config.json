@@ -1,12 +1,12 @@
 {
   "is_backup": true,
   "interval": {
-    "second": "*",
+    "second": "*/2",
     "day": "*",
     "minute": "*",
     "month": "*",
     "year": "*",
-    "hour": "22"
+    "hour": "*"
   },
   "output": false,
   "type": "python",

@@ -14,9 +14,13 @@ def main():
         return
 
     file_filter = '*.txt'
-    print('Look at these beautiful files!')
     files = glob(pth.join(folder, file_filter))
     files = list(filter(old_file, files))
+    if files:
+        print('Look at these beautiful files!')
+    else:
+        print('No old text files')
+
     for f in files:
         with open(f, 'r') as fil:
             contents = fil.read()
