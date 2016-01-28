@@ -16,7 +16,7 @@ def main():
     }
     params['is_backup'] = True
     params['output'] = False
-    params['script'] = savefile + '.py'
+    params['script'] = 'jobs/' + savefile + '.py'
 
     if not savefile:
         savefile = 'autoconfig'
