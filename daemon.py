@@ -18,6 +18,7 @@ START = time.time()
 # a config file for every script run
 
 def main():
+    global START
     # need to run all files within this directory
     os.chdir(get_parent_dir())
 
@@ -40,9 +41,12 @@ def main():
         changed = changed_files(jobs)
         added = added_files(jobs)
         for change in changed:
-            remove_job(change, scheduler)
+            print('Changed config file: {}\nreloading...'.format(change))
+            START = time.time()
+            remove_job(jobs[change], scheduler)
             jobs[change] = create_job(changed[change], scheduler)
         for add in added:
+            print('New job added!\n\t{}'.format(add))
             jobs[add] = create_job(added[add], scheduler)
 
 
@@ -106,7 +110,7 @@ def added_files(jobs):
         keys = filter(lambda a: a not in jobs, configs)
         return {key: configs[key] for key in keys}
     else:
-        return None
+        return {}
 
 def safeify_config():
     pass

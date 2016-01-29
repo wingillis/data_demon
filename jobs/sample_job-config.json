@@ -1,7 +1,7 @@
 {
   "is_backup": true,
   "interval": {
-    "second": "*/2",
+    "second": "*/5",
     "day": "*",
     "minute": "*",
     "month": "*",
