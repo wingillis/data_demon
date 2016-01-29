@@ -13,5 +13,6 @@
   "script": "jobs/sample_job.py",
   "watch": [
     "/Users/wgillis/Desktop/test"
-  ]
+  ],
+  "backup_location": "/Users/wgillis/Desktop/alternate_backup"
 }

@@ -7,6 +7,7 @@ from backup_utility import *
 
 def main():
     path = [project('wins test'), component('sinWave'), date()]
+    set_default(__file__)
     if len(sys.argv) > 2:
         folder = sys.argv[-2]
     else:
